@@ -93,6 +93,7 @@ namespace Unip.GFA.Site.Controllers
         public ActionResult LogOff()
         {
             _servicoUsuario.LogOff();
+            //FormsAuthentication.SignOut();
             return RedirectToAction("LogOn", "Autenticacao");
         }
         #endregion
