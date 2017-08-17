@@ -49,7 +49,7 @@ namespace Unip.GFA.Site.Controllers
             {
                 IMapper mapper = config.CreateMapper();
                 var retorno = mapper.Map<Usuario, UsuarioModel>(_servicoUsuario.AutenticarUsuario(dados));
-
+                //FormsAuthentication.SetAuthCookie(dados.Id, false);
                 switch (retorno.Status)
                 {
                     case 1:                        
